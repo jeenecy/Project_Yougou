@@ -1,0 +1,86 @@
+<meta charset="UTF-8">
+<body>
+<header></header>
+<script src="../libs/require.js" data-main="js/model/header"></script>
+<!-- 登录和图片区域 -->
+<div class="uc_hd">
+        <div class="cen clearfix rel">
+            <h2 class="cen_logo"><a href="https://www.yougou.com"><img src="/template/common/images/usercenter/signin-register-logo.png" alt=""/></a></h2>
+            <p class="cen_font fl">
+                用户登录
+            </p>
+        </div>
+    </div>
+<!-- 表单区域 -->
+<div class="cen-new rel">
+  
+        <a href="http://www.yougou.com" target="_blank" class="cen-new" style="background: url('http://i2.ygimg.cn/pics/shop/cms/image/cms/2018/06/28/ba839750211e4c6485fe16dea496b709.jpg') no-repeat top center;position: absolute;top: 0;left: 0;z-index: 0"></a>
+     
+        <div class="nreg_box mt15 clearfix" style="left: 50%;margin-left: 115px;position: absolute;top: 0;width: 378px;z-index: 1;">
+            <div class="nreg_left fr">
+                <ul class="tab_sig_reg clearfix">
+                    <li class="tab_sig tab_cur"><a href="#">帐户密码登录</a></li>
+                    <li class="tab_reg"><a href="javascript:a();">手机号快捷登录</a></li>
+                </ul>
+                <div class="nreg_form">
+                    <form onsubmit="return false;" id="loginform" method="post">
+      <input type="hidden" name="8m6m6X9f4t" value="6X8G2O" id="loginNonceId"/>
+                        <dl class="nreg_item clearfix">
+                            <dd>
+                                <div class="nreg_input_bg">
+                                    <i class="reg_user_name"></i>
+                                    <input type="text" name="email" placeholder="手机号/会员名称/邮箱" id="email_" class="nreg_input" maxlength="50" value=""/>
+                                </div>
+                            </dd>
+                            <dt><div id="login_email_tip" class="errortips"></div></dt>
+                        </dl>
+                        <dl class="nreg_item clearfix">
+                            <dd>
+                                <div class="nreg_input_bg">
+                                    <i class="reg_password"></i>
+                                    <input type="password" name="password" placeholder="请输入密码" id="password_" class="nreg_input"  maxlength="50" />
+                                </div>
+                            </dd>
+                            <dt><div id="login_password_tip" class="errortips"></div></dt>
+                        </dl>
+                <div id="code_container" style="display:none;">
+                        <dl class="nreg_item clearfix">
+                            <dd>
+                                <div class="nreg_input_bg fl" style="width:202px">
+                                    <label class="lab1 ver_code" for="code2_">验证码</label>
+                                    <input type="text" id="code2_" class="nreg_sinput" maxlength="4" style="width: 130px"/>
+                                </div>
+                                <div class="fl" style=" padding:0">
+                                    <img  id="imageValidate2" onclick="changeValidateImage2();return false;"/>
+                                </div>
+                            </dd>
+                            <dt><div id="code2_tip"></div></dt>
+                        </dl>
+                    </div>
+                        <p style="display: block;text-align: right;margin-right: 17px;">
+                            <a href="https://www.yougou.com/forgotpassword.jhtml" style="line-height: 26px; text-decoration:underline">忘记密码？</a>
+                        </p>
+                        <p style="text-align: center">
+                            <input type="submit" class="nlog_submit" value="点击登录" title="登录"/>
+                        </p>
+                        <p class="f_black" style="color: #999;margin-top: 10px;text-align: center;">使用合作网站账号登录优购：</p>
+                        <p class="cop_link">
+                             <a class="we_chat f_blue" href="/member/toThirdPartLogin.jhtml?type=quick-weixin&amp;redirectURL=http://www.yougou.com/">&nbsp;</a> |
+                            <a href="/api/alipay/sendToFastLogin.sc?redirectURL=http://www.yougou.com/" class="nreg_zpay f_blue">&nbsp;</a> |
+                            <a href="/api/qq/toLogin.sc?redirectURL=http://www.yougou.com/" class="nreg_qq f_blue">&nbsp;</a> |
+                            <a href="/api/sina/toLogin.sc?redirectURL=http://www.yougou.com/" class="nreg_sina f_blue">&nbsp;</a> |
+                            <a href="/api/renren/toRenren.sc?redirectURL=http://www.yougou.com/" class="nreg_people f_blue">&nbsp;</a>
+                        </p>
+                        <input type="hidden" name="8h9Z9t9y1F" value="7Y9R4u" id="loginNonceId"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blank20" ></div>
+    
+    
+    
+    <div class="footer Gray">
+      <p class="tright">Copyright &copy; 2011-2014 Yougou Technology Co., Ltd.  <a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备09070608号-4</a> 增值电信业务经营许可证：<a href="http://www.miibeian.gov.cn" target="_blank" style="padding-left:0" >粤 B2-20090203</a></p>
+    </div>

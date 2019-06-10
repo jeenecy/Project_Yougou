@@ -1,0 +1,72 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>优购商城详情页</title>
+<link rel="stylesheet" href="/libs/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/list.css">
+<script src="/libs/require.js" data-main="/js/list"></script>
+<link rel="stylesheet" href="/css/header.css"/>
+</head>
+
+<body>
+<header></header>
+<div class="filter-title-list">
+    <ul>
+        <li>
+            <a href="shouye">首页</a>
+            <span class="fenge">&nbsp;></span>
+        </li>
+        <li>
+            <a href="shouye">女鞋</a>
+            <span class="fenge">&nbsp;</span>
+        </li>
+    </ul>
+</div>
+<div class="classify-left">
+    <p>共>18182个结果</p>
+    <ul>
+        <li><a href="javascript:;">品牌</a></li>
+        <li><a href="javascript:;">品类</a></li>
+        <li><a href="javascript:;">价格</a></li>
+        <li><a href="javascript:;">尺码</a></li>
+        <li><a href="javascript:;">颜色</a></li>
+        <li><a href="javascript:;">季节</a></li>
+        <li><a href="javascript:;">风格</a></li>
+    </ul>
+</div> 
+<div class="classify-right">  
+    <ul>
+            <li><a href="javascript:;">新品</a></li>
+            <li><a href="javascript:;"class="tt">热销</a></li>
+            <li><a href="javascript:;">推荐</a></li>
+            <li><a href="javascript:;">价格</a></li>
+            <li><a href="javascript:;">折扣</a></li>
+    </ul>
+    <p>1 - 227页/<a href="javascript:;">下一页</a></p>
+</div>
+<!-- 数据渲染 -->
+<div class="goods-list" id="list-container">
+          
+</div>
+<script type="text/html" id="list-template">
+ 
+  <div class="list-main">
+      <ul>
+        {{each list shop}}
+          <li>
+              <a href="/html/detail.html?id={{shop.id}}">
+                  <p><img src="{{shop.image}}"></p>
+                  <p id="title">{{shop.title}}</p>
+                  <p id="activity">{{shop.info}}</p>
+                  <p id="price">￥{{shop.price}}</p>
+                  <span id="state">{{shop.active}}</span>
+              </a>
+          </li>
+        {{/each}}
+      </ul>
+  </div>
+</script>
+
+<footer></footer>
+</body>

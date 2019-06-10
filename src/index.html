@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>仿优购网商城</title>
+    <link rel="stylesheet" type="text/css" href="./libs/swiper/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="./libs/iconfont/iconfont.css"/>
+    <!-- 引入index.css,然后把index作为这个页面的主样式模块引入 -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 引入require.js，然后把index作为这个页面的主模块引入，data-main这个属性是requirejs帮我们去读取，然后加载进来index.js文件 -->
+    <script src="libs/require.js" data-main="js/index"></script>
+</head>
+<body>
+  <!-- 头部+导航区域 -->
+    <header></header>
+  <!-- 轮播图区域 -->
+  <div class="swiper-container" id="bannerImg">
+    <ul class="swiper-wrapper">
+        <li class="swiper-slide"><a href="javascript:;"><img src="images/lb1.jpg" alt=""></a></li>
+        <li class="swiper-slide"><a href="javascript:;"><img src="images/lb2.jpg" alt=""></a></li>
+        <li class="swiper-slide"><a href="javascript:;"><img src="images/lb3.jpg" alt=""></a></li>
+        <li class="swiper-slide"><a href="javascript:;"><img src="images/lb4.jpg" alt=""></a></li>
+        <li class="swiper-slide"><a href="javascript:;"><img src="images/lb5.jpg" alt=""></a></li>
+      </ul>
+    <a class="arrow-left" href="javascript:;" tabindex="0" role="button" aria-label="Previous slide"></a> 
+    <a class="arrow-right" href="javascript:;" tabindex="0" role="button" aria-label="Next slide"></a> 
+    <div id="bannerpagination" class="pagination swiper-pagination-clickable swiper-pagination-bullets">
+        <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span>
+        <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 2"></span>
+        <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span>
+    </div>
+</div>
+
+    <!-- 主页详情区域 -->
+    <main>
+      <!-- 新品推荐 -->
+      <div class="newProduct">
+        <div class="title">新品推荐</div>
+        <ul>
+          <li><a href="javascript:;">男女鞋</a></li>
+          <li><a href="javascript:;">运动</a></li>
+          </ul>
+        <!--小轮播区域 -->
+          <div></div>
+      </div>
+      <!--主推大牌 -->
+      <div class="firstIntroduce">
+        <div class="firstIntroduce-top">
+          <div class="title">今日主推大牌</div>
+          <ul>
+          <li><a href="javascript:;">男女鞋</a></li>
+          <li><a href="javascript:;">运动</a></li>
+          </ul>
+        </div>
+          <!-- 图片区域 -->
+        <div class="panels">
+        <ul class="brand-pictures brand1">
+          <li>
+            <a href="javascript:;"><img src="./images/1.jpg"/></a>
+            <div class="hover hide"><img src="./images/whiteL-converse.png"/></div>
+          </li>
+          <li>
+              <a href="javascript:;"><img src="./images/2.jpg"/></a>
+              <div class="hover hide"><img src="./images/whiteL-timberland.png"/></div>
+          </li>
+          <li>
+              <a href="javascript:;"><img src="./images/3.jpg"/></a>
+              <div class="hover hide"><img src="./images/whiteL-asics.png"/></div>
+          </li>
+        </ul>  
+      </div>
+    </div> 
+    <!-- 潮流资讯专区 -->
+    <div class="fashion">
+        <div class="command-title">
+            <div class="title">
+              品牌潮流资讯
+            </div>
+            <div class="en-title">
+              BRAND  FASHION
+            </div>
+            <ul style="width:1020px;margin:40px auto;overflow:hidden;">
+                <li style="float:left;margin:0 12px;">
+                  <video class="video" poster="//i1.ygimg.cn/pics/shop/seoul/lsl/bai_li_(2).jpg" style="background-color:#000;" controlslist="nodownload"  width="315" height="458">
+                            <source src="videos/1.mp4">
+                        </video>
+                </li>
+                <li style="float:left;margin:0 12px;">
+                  <video class="video" poster="//i1.ygimg.cn/pics/shop/seoul/lsl/si_jia_tu_(2).jpg" style="background-color:#000;" controlslist="nodownload"  width="315" height="458">
+                            <source src="videos/2.mp4">
+                        </video>
+                </li>
+                <li style="float:left;margin:0 12px;">
+                  <a href="javascript:;" target="_blank"><img src="images/cl3.jpg" alt="" width="315" height="458"></a> 
+                </li>
+              </ul>
+          </div>
+    </div>
+    </main>
+  <!-- 尾部区域 -->
+    <footer></footer>
+</body>
+</html>
