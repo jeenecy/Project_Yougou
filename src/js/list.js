@@ -1,5 +1,5 @@
 require(['./config'], () => {
-    require(['template','url','header','footer'], (template,url,header,footer) => {
+    require(['template','url','header'], (template,url,header) => {
       class List{
         constructor () {
           this.headerContainer = $("header")

@@ -9,7 +9,7 @@ define(['jquery'], () => {
 
     loadFooter () {
       // 把header.html加载到页面的<footer>标签里
-      this.container.load('/html/model.footer.html')
+      this.container.load('/html/model/footer.html')
     }
   }
 

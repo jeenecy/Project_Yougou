@@ -13,7 +13,7 @@ require.config({
     url:'js/model/url',
     template:'libs/art-template/template-web',
     zoom: "libs/jquery-plugins/jquery.exzoom",
-    side: "js/module/side",
+    side: "js/model/side",
     fly: "libs/jquery-plugins/jquery.fly",
     cookie: "libs/jquery-plugins/jquery.cookie"
   },
