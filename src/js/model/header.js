@@ -5,7 +5,7 @@ define(['jquery'], () => {
     constructor () {
       this.container = $("header")
       this.load().then(() => {
-        this.search()
+      this.search()
       })
     }
 

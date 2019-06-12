@@ -42,6 +42,29 @@
           <li><a href="javascript:;">男女鞋</a></li>
           <li><a href="javascript:;">运动</a></li>
           </ul>
+
+          <!-- 新品推荐里面的数据渲染模块 -->
+          <div class="menu" id="menu-container"></div>
+          <!-- menu模板 -->
+          <script type="text/html" id="menu-template">
+                  <ul id="switch" style="left:0">
+                      {{each menu item}}
+                      <li>
+                          <a href="/html/detail.html?id={{item.id}}">
+                              <dl>
+                                  <dt><img src="{{item.image}}"></dt>
+                                  <dd>{{item.activity}}</dd>
+                                  <span>{{item.state}}</span>
+                              </dl>
+                              <p>{{item.title}}</p>
+                              <p class="price">￥{{item.price}}</p>
+                          </a>
+                      </li>
+                      {{/each}}
+                  </ul>
+                  <div class="btn-l iconfont" id="btn-l"></div>
+                  <div class="btn-r iconfont" id="btn-r"></div>
+          </script>
         <!--小轮播区域 -->
           <div></div>
       </div>

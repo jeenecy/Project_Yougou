@@ -3,13 +3,14 @@
 // 首先引入config，配置的短名称就生效了，接下来再去require这些短名称就会根据config去加载对应的模块
 // 包括模块里面对另外模块的依赖都可以使用短名称
 require(['./config'], () => {
-  require(['swiper','header', 'footer', ], (swiper,url, header) => {
+  require(['template','url','swiper','header', 'footer', ], (template,url,swiper,url, header) => {
     class Index {
       constructor () {
         this.headerContainer = $("header")
         this.cart()
         this.swiper()
         console.dir($)
+        this.first_introduce()
       }
 
       cart () {
@@ -20,19 +21,6 @@ require(['./config'], () => {
           // this指向事件源
           // console.log(this)
         })
-      }
-
-  
-      renderHot (resBody) {
-        // 第一个参数是模板的id，第二个参数是这个模板里面需要的数据
-        let html = template('list-template', {
-          list: resBody.list,
-          bigImg: resBody.bigImg
-        })
-        // console.log(html)
-        $("#list-container").html(html)
-
-
       }
 
       swiper() {
@@ -57,6 +45,26 @@ require(['./config'], () => {
 
       }
 
+      first_introduce(){
+        //负责渲染首页推荐模块
+
+        $.get(url.baseUrl + '/intd/get',resp =>{
+          // console.log(resp);检查resp能否接收到返回的数据
+          // console.log(template)；检查template方法的调用
+          if(resp.res_code ===200){
+            this.renderHot(resp.res_body)
+          }
+        })
+      }
+      renderHot(resBody){
+        //第一个参数是模板id，第二个参数是模板数据
+        let html =template('list-introduce-template',{
+          list: resBody.list
+        })
+        // console.log(html)//看一下控制台是否能输出渲染的数据
+        $("#list-container").html(html)
+        //让渲染好的数据打印到页面上
+      }
 
     }
     new Index()

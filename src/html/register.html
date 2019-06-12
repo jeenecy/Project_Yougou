@@ -1,11 +1,109 @@
 <meta charset="UTF-8">
-<header></header>
-<script src="/libs/require.js" data-main="/js/register"></script>
-<link rel="stylesheet" href="/css/header.css"/>
-<link rel="stylesheet" href="libs/iconfont/iconfont.css"/>
-<div class="zhuce">
-    <div class="denglu-main">
-        <img src="https://passport.yougou.com/template/common/images/usercenter/signin-register-logo.png">
-    </div> 
-    <p>用户注册</p>  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>优购商城注册页</title>
+  <link rel="stylesheet" href="/css/register.css">
+  <link rel="stylesheet" href="/libs/iconfont/iconfont.css">
+  
+  </head>
+  
+  <body>
+ <!--头部 -->
+ 
+ <div class="header">
+  <ul class="left-content">
+    <li>
+      <div class="scan-code">
+        <a href="javascript:;">关注</a>
+        <div class="border-content">
+          <div class="border">
+            <img src="../../images/weChat.jpg" alt="关注公众号" class="qr-code" />
+            <span class="title">关注公众号</span>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item-app">
+      <div class="scan-code">
+        <a href="javascript:;">下载APP</a>
+        <div class="border-content">
+          <div class="border">
+            <img src="../../images/app.jpg" alt="优购APP下载" class="qr-code" />
+            <span class="title">优购APP下载</span>
+          </div>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+  <ul class="right-content" id="top_nav">
+    <li class="item-frist about_user">
+      <a rel="nofollow" href="/html/login.html">登录</a> /
+      <a rel="nofollow" href="/html/register.html">注册</a>
+    </li>
+    <li class="item">
+      <a href="javascript:;"  class="top-collect">
+        <i class="iconfont icon-collection"></i>
+        <span class="title">收藏</span>
+      </a>
+    </li>
+    <li class="item-cart">
+      <a href="/html/cart.html"><i class="iconfont icon-gouwuchekong"></i>购物袋</a>
+    </li>
+    <li class="item">
+      <div class="notice">
+        <a href="javascript:;">公告</a>
+        <div class="notice-content">
+          <ul class="notice-list">
+            
+              <li class="item ">
+                <a target="_blank" href="javascript:;">优购客服电话变更</a>
+              </li>
+            
+              <li class="item item1 ">
+                <a target="_blank" href="javascript:;">关闭分享购频道</a>
+              </li>
+            
+              <li class="item item1 ">
+                <a target="_blank" href="javascript:;">提醒会员谨防诈骗电话</a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
+<!-- 注册界面 -->
+<div class="zhuce">
+<div class="zhuce-main">
+  <div class="zhuce-logo">
+  <a href="/index.html"><img src="../images/signin-register-logo.png"></a>
+  </div>
+  <p>新用户注册</p>
+</div>
+</div>
+<!-- 大banner+登录界面 -->
+<div class="banner">
+  <div class="banner-main">
+    
+    <div class="zhuce-box">
+        <ul class="tab_sig_reg">
+            <li class="tab_sig"><a href="/html/login.html">登录</a></li>
+            <li class="tab_reg tab_cur"><a href="#">注册</a></li>
+        </ul>
+        <div class="zhuce-bottom">
+        <div>手机号：<input type="text" name="mobile" id="reg_mobile_"  valid="Mobile" placeholder="请输入您的手机号码"></div>
+        <div>验证码：<input type="text" name="check"placeholder="请输入验证码"></div>
+        <div>密码：    <input type="password" name="password1" id="reg_password_" class="nreg_input" maxlength="25" valid="Password" placeholder="字母、数字、符号均可，6-25个字符以内"></div>
+        <input type="checkbox" id="rules" name="rules" style="margin-top:0" checked="checked"class="gouxuan">
+        <input type="submit" title="立即注册" value="确认并注册" id="reg_buton">
+      </div>
+    </div>
+</div>  
+
+</div>
+
+</body>
