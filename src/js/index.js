@@ -9,7 +9,9 @@ require(['./config'],()=>{
         this.headerContainer = $("header")
         this.cart()
         this.swiper()
-        console.dir($)
+        // console.dir($)
+        this.renderMenu()
+        this.renderHot()
       }
 
       cart () {
@@ -55,16 +57,65 @@ require(['./config'],()=>{
       //     }
       //   })
       // }
-      renderHot(resBody){
-        //第一个参数是模板id，第二个参数是模板数据
-        let html =template('list-introduce-template',{
-          list: resBody.list
+
+      // renderHot(resBody){
+      //   //第一个参数是模板id，第二个参数是模板数据
+      //   let html =template('list-introduce-template',{
+      //     list: resBody.list
+      //   })
+      //   // console.log(html)//看一下控制台是否能输出渲染的数据
+      //   $("#list-container").html(html)
+      //   //让渲染好的数据打印到页面上
+      // }
+
+      //想做一个jqery插件的图片分割 失败了
+
+      // tpfg(){
+      //   $(function() {
+  
+      //     var fragmentConfig = {
+      //       container : '.img-flex',//显示容器
+      //       line : 10,//多少行
+      //       column : 24,//多少列
+      //       width : 1000,//显示容器的宽度
+      //       animeTime : 10000,//最长动画时间,图片的取值将在 animeTime*0.33 + animeTime*0.66之前取值 
+      //       img : '/images/banner.jpg'//图片路径
+            
+      //     };
+          
+      //     fragmentImg(fragmentConfig);
+      //   })
+      
+      //  }
+
+      renderMenu(){
+        //负责渲染热销模块
+      
+        $.get(url.baseUrl + '/index/get',resp =>{
+          // console.log(resp);检查resp能否接收到返回的数据
+          // console.log(template)；检查template方法的调用
+          if(resp.res_code ===200){
+            this.renderHot(resp.res_body)
+          }
+          // console.log(resp.res_body)
         })
-        // console.log(html)//看一下控制台是否能输出渲染的数据
-        $("#list-container").html(html)
-        //让渲染好的数据打印到页面上
       }
 
+      renderHot(resBody){
+        //第一个参数是模板id，第二个参数是模板数据
+        let html =template('menu-template',{
+          menu: resBody.list
+          
+        })
+        
+        // console.log(html)//看一下控制台是否能输出渲染的数据
+        $("#menu-container").html(html)
+        //让渲染好的数据打印到页面上
+      }
+      //
+
+     
+      
     }
     new Index()
   })

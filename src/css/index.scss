@@ -4,6 +4,40 @@
 
 //轮播图区域
 
+//超大banner图片分割区域
+// .popup-container{
+// 	// position: fixed;
+// 	z-index: 9999;
+// 	width: 1280px;
+// 	height: 350px;
+// 	background-color: rgba(0,0,0,0.85);
+//     overflow: hidden;
+//     .clearfix{ 
+//         *zoom: 1; 
+//       }
+//       .clearfix:before, 
+//       .clearfix:after { 
+//         display: table; 
+//         line-height: 0; 
+//         content: ""; 
+//       }
+//       .clearfix:after { 
+//         clear: both; 
+//       }
+//     .img-flex{
+//         position: absolute;
+//     }
+//     .img-flex ul{
+//         font-size: 0;
+//     }
+//     .img-flex ul li{
+//         display: block;
+//         background-repeat: no-repeat;
+//         float: left;
+//         position: relative;
+//     }
+// }
+
 //新品发布区域
 .newProduct{width:100%;
             height:568px;
@@ -19,7 +53,131 @@
             li{padding: 10px;}
         }
 //数据渲染模块
+.menu {
+    width: 1200px;
+    height: 295px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
 
+    ul {
+        transition-duration: 0.3s;
+        width: 3700px;
+        height: 295px;
+        position: absolute;
+        left: 0;
+
+        li {
+            width: 230px;
+            height: 295px;
+            float: left;
+            margin-right: 12.5px;
+            text-align: center;
+
+            dl {
+                position: relative;
+                width: 230px;
+                height: 241px;
+                border-radius: 10px;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+                transition: all .2s linear;
+                overflow: hidden;
+
+                &:hover {
+                    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                }
+
+                dt {
+                    margin: 43px auto 0;
+                    width: 150px;
+                    height: 150px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                dd {
+                    width: 230px;
+                    height: 38px;
+                    position: absolute;
+                    bottom: 0;
+                    background: #f3f3f3;
+                    font-size: 12px;
+                    line-height: 38px;
+                    color: #777777;
+                }
+
+                span {
+                    display: inline-block;
+                    position: absolute;
+                    width: 66px;
+                    height: 22px;
+                    line-height: 22px;
+                    font-size: 14px;
+                    background: #ff6a6e;
+                    color: #ffffff;
+                    left: 50%;
+                    margin-left: -33px;
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    top: 0;
+                }
+
+            }
+
+            P {
+                font-size: 13px;
+            }
+
+            P:nth-of-type(1) {
+                color: #3a3a3a;
+                margin: 12px auto 10px;
+            }
+
+            P:last-of-type {
+                color: #d0021b;
+            }
+        }
+    }
+
+    .iconfont {
+        width: 36px;
+        height: 72px;
+        background: rgba(0, 0, 0, 0.06);
+        position: absolute;
+        top: 85px;
+        line-height: 72px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.18)
+        }
+    }
+
+    .btn-l {
+        left: 0;
+        border-radius: 0 8px 8px 0;
+        // display: none;
+
+        &::before {
+            content: "\e600";
+        }
+    }
+
+    .btn-r {
+        right: 0;
+        border-radius: 8px 0 0 8px;
+
+        &::before {
+            content: "\e601";
+        }
+    }
+}
 
     }
 //今日主推大牌

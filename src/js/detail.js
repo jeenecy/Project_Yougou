@@ -3,47 +3,33 @@ require(["config"], () => {
         class Detail {
             constructor () {
                 this.init();
+                this.changeQuantity();
             }
 
             init () {
                 //从url取到id， 携带id请求详情数据，渲染详情页
                 let id = Number(location.search.slice(4));
                 // console.log(res_code)
-                console.log(1)
+                // console.log(1)
                 this.id = id;
                 $.get(url.baseUrl + "/detail/get", {id}, resp => {
                     if(resp.res_code === 200) {
-                        console.log(resp,1)
+                        // console.log(resp,1)
                         let data = resp;    
-                        console.log(data,11111111)
+                        // console.log(data,11111111)
                         // data = {...data, id};
                         this.render(data);
-                        console.log(2)
                     }
                 })
             }
 
 
             render (data) {
-                console.log(data,2222222222)
+                // console.log(data,2222222222)
                 $("#detail-container").html(template("detail-template", {data}));
                 this.zoom();
-                this.borderSwitch();
                 this.changeQuantity();
                 // new addCart($("#detail-container"),data);
-            }
-
-            borderSwitch () {
-                let navBox =  $("#product-img>ul>li>a"),
-                    lastIndex = 0;
-                    navBox[lastIndex].className = "bor";
-                    Array.from(navBox).forEach(function (item, index) {
-                        item.onclick = function () {
-                            navBox[lastIndex].classList.remove("bor")
-                            navBox[index].classList.add("bor");
-                            lastIndex = index;
-                        }
-                    })
             }
 
             zoom () {

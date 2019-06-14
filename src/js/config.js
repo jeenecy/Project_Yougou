@@ -15,7 +15,8 @@ require.config({
     zoom: "libs/jquery-plugins/jquery.exzoom",
     side: "js/model/side",
     fly: "libs/jquery-plugins/jquery.fly",
-    cookie: "libs/jquery-plugins/jquery.cookie"
+    cookie: "libs/jquery-plugins/jquery.cookie",
+    tpfg:"libs/jquery-plugins/fragment"
   },
   shim: {
     zoom: {
@@ -26,6 +27,9 @@ require.config({
     },
     cookie: {
         deps: ["jquery"]
-    }
+    },
+    tpfg: {
+      deps: ["jquery"]
+  }
 }
 })

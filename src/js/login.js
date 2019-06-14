@@ -3,8 +3,11 @@ require(['./config'], () => {
       class Index {
         constructor () {
           this.headerContainer = $("header")
+          this.live()
         }
-  
+  live(){
+    console.log(1)
+  }
       }
       new Index()
     })
